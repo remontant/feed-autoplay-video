@@ -11,7 +11,8 @@
         <h1>FEED VIDEO TEST</h1>
     </header> -->
     
-    <main class="feed-container">
+    <main class="feed-wrapper">
+        <div class="feed-top-container">
         <!-- Top Search Section (Not a card) -->
         <div class="nate-top-section">
             <div class="nate-search-bar">
@@ -47,6 +48,8 @@
             </div>
         </div> -->
 
+        </div>
+        <div class="feed-cards-container">
         <div class="card top-feed-card" style="padding:16px;">
             <div class="weather-info">
                 <span class="icon">⛅</span>
@@ -63,9 +66,9 @@
                 <!-- Grid Video 1 -->
                 <article class="video-card">
                     <div class="video-container vertical" style="border-radius: 12px; overflow: hidden;">
-                        <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1516245834210-c4c142787335?w=600&h=1066&fit=crop&q=80');"></div>
+                        <div class="thumbnail" style="background-image: url('https://tn.tv.nate.com/unsafe/1280x720/http://img.vod.mbn.co.kr/vod2/593/2026/04/22/20260422162647_22_593_1070098_1080_7.jpg');"></div>
                         <video 
-                            data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                            data-src="https://nate-mbn-h.smartmediarep.com/smc/nate/multi/eng/MK1_P1070098/2f6d626e2f766f64322f3539332f323032362f30342f32322f32303236303432323136323634375f32325f3539335f313037303039385f313038305f7433342e6d7034/0-0-0/content.mp4?solexpire=1776973243&solpathlen=173&soltoken=5973f48558d55bb4f0c3d7e720d09e7e&soltokenrule=c29sZXhwaXJlfHNvbHBhdGhsZW58c29sdXVpZA==&soluriver=2&soluuid=16536003-a17d-440f-9774-8f710ceb8589&itemtypeid=34" 
                             muted 
                             playsinline 
                             preload="none"
@@ -83,9 +86,9 @@
                 <!-- Grid Video 2 -->
                 <article class="video-card">
                     <div class="video-container vertical" style="border-radius: 12px; overflow: hidden;">
-                        <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&h=1066&fit=crop&q=80');"></div>
+                        <div class="thumbnail" style="background-image: url('https://tn.tv.nate.com/unsafe/1280x720/http://nbbs.tvchosun.com/data/bbs/C202600017_5/C202600017_5_202604210945232971.jpg');"></div>
                         <video 
-                            data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                            data-src="https://nate-tvchosun-h.smartmediarep.com/smc/nate/multi/eng/CS1_712124/2f747663686f73756e2f4353332f323032365f707265766965772f656e7465722f433230323630303031375f636c69702f433230323630303031375f636c69705f32303236303432315f36725f31335f7433342e6d7034/0-0-0/content.mp4?solexpire=1776973273&solpathlen=211&soltoken=75f8b5a39ca988b9cd736df3a8b8e9fd&soltokenrule=c29sZXhwaXJlfHNvbHBhdGhsZW58c29sdXVpZA==&soluriver=2&soluuid=4990ac3c-3cd2-419c-b073-9b62ae412ebf&itemtypeid=34" 
                             muted 
                             playsinline 
                             preload="none"
@@ -115,9 +118,9 @@
         <!-- Video Card 1 (가로형 16:9) -->
         <article class="card video-card">
             <div class="video-container">
-                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=800&q=80');"></div>
+                <div class="thumbnail" style="background-image: url('https://tn.tv.nate.com/unsafe/1280x720/https://mediafactory.play.kbs.co.kr/clip/2026/04/22/69e8bdb08d995beec93c70fc/thumbnail/69e8bdb08d995beec93c70fc_upload_1776862923110.jpg');"></div>
                 <video 
-                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                    data-src="https://nate-kbs-h.smartmediarep.com/smc/nate/multi/eng/K02_PS-2026066404-01-000_MFSC8/2f6b62732f4b42535f4d462f32303236303432322f54323031332d303437362f54323031332d303437365f31325f32303236303432325f50532d323032363036363430342d30312d3030305f30305f4d465343385f4d34324831303030305f7433342e6d7034/0-0-0/content.mp4?solexpire=1776973286&solpathlen=261&soltoken=5b049756453e51e044e62b297c82004d&soltokenrule=c29sZXhwaXJlfHNvbHBhdGhsZW58c29sdXVpZA==&soluriver=2&soluuid=94340bc9-285c-485b-8755-9dd181d2a707&itemtypeid=34" 
                     muted 
                     playsinline 
                     preload="none"
@@ -138,9 +141,9 @@
         <article class="card video-card">
             <!-- 세로형은 video-container에 vertical 클래스 추가 -->
             <div class="video-container vertical">
-                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=1066&fit=crop&q=80');"></div>
+                <div class="thumbnail" style="background-image: url('https://tn.tv.nate.com/unsafe/1280x720/http://nbbs.tvchosun.com/data/bbs/C202600017_5/C202600017_5_202604210948074911.jpg');"></div>
                 <video 
-                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                    data-src="https://nate-tvchosun-h.smartmediarep.com/smc/nate/multi/eng/CS1_712125/2f747663686f73756e2f4353332f323032365f707265766965772f656e7465722f433230323630303031375f636c69702f433230323630303031375f636c69705f32303236303432315f36725f31345f7433342e6d7034/0-0-0/content.mp4?solexpire=1776973297&solpathlen=211&soltoken=c27ab493d1ff8d7e3247ab0d00a08a55&soltokenrule=c29sZXhwaXJlfHNvbHBhdGhsZW58c29sdXVpZA==&soluriver=2&soluuid=937d927a-2fd3-4ff4-89a9-00237a636c07&itemtypeid=34" 
                     muted 
                     playsinline 
                     preload="none"
@@ -170,9 +173,9 @@
         <!-- Video Card 3 (세로형 9:16) -->
         <article class="card video-card">
             <div class="video-container vertical">
-                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=600&h=1066&fit=crop&q=80');"></div>
+                <div class="thumbnail" style="background-image: url('https://tn.tv.nate.com/unsafe/1280x720/http://img.vod.mbn.co.kr/vod2/1027/2026/04/22/20260422002729_21_1027_1153178_1080_7.jpg');"></div>
                 <video 
-                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                    data-src="https://nate-mbn-h.smartmediarep.com/smc/nate/multi/eng/MK1_C1153178/2f6d626e2f766f64322f3539332f323032362f30342f32322f32303236303432323030323732395f32315f313032375f313135333137385f313038305f7433342e6d7034/0-0-0/content.mp4?solexpire=1776973307&solpathlen=177&soltoken=4997a7a0e3d8889dac2eadad14f73848&soltokenrule=c29sZXhwaXJlfHNvbHBhdGhsZW58c29sdXVpZA==&soluriver=2&soluuid=26863c8e-1a72-474f-a8ba-270432f9bf80&itemtypeid=34" 
                     muted 
                     playsinline 
                     preload="none"
@@ -196,7 +199,7 @@
                 <div class="video-container vertical">
                     <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1516245834210-c4c142787335?w=600&h=1066&fit=crop&q=80');"></div>
                     <video 
-                        data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                        data-src="https://smrmembers-smr.smartmediarep.com/smc/smrmembers/single/eng/0/smr/contents/video/2026/03/30/d70b6242-edd1-4997-a9b1-75d20d563465_t34.mp4" 
                         muted 
                         playsinline 
                         preload="none"
@@ -390,6 +393,7 @@
                 <div class="card-meta">1주일 전 · End of Feed</div>
             </div>
         </article>
+        </div>
     </main>
 
     <script src="script.js"></script>
