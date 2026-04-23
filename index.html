@@ -7,11 +7,101 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <h1>FEED VIDEO TEST</h1>
-    </header>
+    </header> -->
     
     <main class="feed-container">
+        <!-- Top Search Section (Not a card) -->
+        <div class="nate-top-section">
+            <div class="nate-search-bar">
+                <div class="nate-logo">N</div>
+                <input type="text">
+                <div class="nate-search-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="nate-banner">
+                <div class="banner-badge">[ <span class="badge-icon">N</span> ]</div>
+                <div class="banner-text">
+                    <strong>광고광고광고광고</strong>
+                    <p>ADADADADADADADAD</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu Card -->
+        <!-- <div class="card nav-menu-card">
+            <div class="nav-menu">
+                <div class="nav-item"><span class="icon">✉️</span> 메일</div>
+                <div class="nav-item"><span class="icon">☕</span> 카페</div>
+                <div class="nav-item"><span class="icon" style="color: #03c75a; font-weight: 900;">N+</span> 스토어</div>
+                <div class="nav-divider"></div>
+                <div class="nav-item">뉴스</div>
+                <div class="nav-item">엔터</div>
+                <div class="nav-item">스포츠</div>
+            </div>
+        </div> -->
+
+        <div class="card top-feed-card" style="padding:16px;">
+            <div class="weather-info">
+                <span class="icon">⛅</span>
+                <span class="temp">12.8°</span>
+                <span class="location">제주</span>
+                <span class="divider">|</span>
+                <span class="market">코스닥 <strong>1,176.72</strong> <span class="down">▼0.37%</span></span>
+            </div>
+        </div>
+        <!-- Feed Section inside a single card for the top content -->
+        <div class="card top-feed-card">
+            <!-- Grid 2 Columns (Shorts) -->
+            <div class="grid-2col" style="padding:16px;">
+                <!-- Grid Video 1 -->
+                <article class="video-card">
+                    <div class="video-container vertical" style="border-radius: 12px; overflow: hidden;">
+                        <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1516245834210-c4c142787335?w=600&h=1066&fit=crop&q=80');"></div>
+                        <video 
+                            data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                            muted 
+                            playsinline 
+                            preload="none"
+                        ></video>
+                        <div class="video-overlay">
+                            <span class="preview-badge">미리보기</span>
+                            <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                        </div>
+                    </div>
+                    <div class="card-content" style="padding: 12px 0 0 0;">
+                        <h2>프로배구 한국전력 FA 세터 이민규 영입...</h2>
+                    </div>
+                </article>
+
+                <!-- Grid Video 2 -->
+                <article class="video-card">
+                    <div class="video-container vertical" style="border-radius: 12px; overflow: hidden;">
+                        <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&h=1066&fit=crop&q=80');"></div>
+                        <video 
+                            data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                            muted 
+                            playsinline 
+                            preload="none"
+                        ></video>
+                        <div class="video-overlay">
+                            <span class="preview-badge">미리보기</span>
+                            <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                        </div>
+                    </div>
+                    <div class="card-content" style="padding: 12px 0 0 0;">
+                        <h2>이다인❤️이승기, 딸 손 꼭잡고 한강 산책...</h2>
+                    </div>
+                </article>
+            </div>
+        </div>
+
         <!-- Text Card -->
         <article class="card">
             <div class="card-image placeholder-image"></div>

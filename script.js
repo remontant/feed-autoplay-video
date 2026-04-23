@@ -11,9 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 카드의 위치를 확인하여 화면에 보이는 카드들을 순서대로 정렬한 후,
     // 아직 재생되지 않은 첫 번째 카드를 찾는 함수
     function getTargetCardToPlay() {
-        const TARGET_TOP = 100; 
-        // 화면 최상단과 카드 상단 사이의 거리가 이 값(픽셀) 이내일 때만 재생 조건 성립
-        const MAX_ALLOWABLE_DISTANCE = 300; 
+        // 기존의 100px(화면 최상단 부근) 대신, 화면 높이의 40% 지점(중앙보다 살짝 위)에 
+        // 카드가 도달했을 때 일찍 재생되도록 기준점을 아래로 내렸습니다.
+        const TARGET_TOP = window.innerHeight * 0.4; 
+        
+        // 기준점이 내려간 만큼, 재생을 시작하는 여유 범위(거리)도 조금 더 넓혀줍니다.
+        const MAX_ALLOWABLE_DISTANCE = 400; 
         
         let visibleCards = [];
 
@@ -25,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 화면 안에 보일 때만 체크 (완전히 화면을 벗어나면 제외)
             if (rect.bottom > TARGET_TOP && rect.top < window.innerHeight) {
+                // 스크롤이 한 번도 일어나지 않은 초기 상태(최상단)에서는 재생 금지
+                if (window.scrollY === 0) return;
+
                 // 그리드 컨테이너의 top 거리와 카드 자체의 top 거리 중 더 가까운 값을 거리로 사용
                 // (그리드가 지정된 위치에 오면 그 안의 카드들이 순차 재생되도록 하기 위함)
                 const distToContainer = Math.abs(containerRect.top - TARGET_TOP);
@@ -111,8 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 페이지 초기 로딩 시 재생하지 않고, 첫 스크롤이 발생할 때만 시작되도록 플래그 설정
+    let hasScrolled = false;
+    
     // 스크롤 이벤트 핸들러
     window.addEventListener('scroll', () => {
+        hasScrolled = true; // 스크롤이 한 번이라도 발생했음을 기록
+
         // 스크롤 중에는 새롭게 재생을 시작하기 위한 대기 타이머를 무효화합니다.
         // (즉, 스크롤이 완전히 멈춰야만 지정된 시간 대기 후 영상이 재생됩니다.)
         videoCards.forEach(card => {
@@ -127,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTimeout = setTimeout(checkVideoCards, 150);
     });
 
-    // 페이지 초기 로딩 시 첫 번째 카드 체크
-    setTimeout(checkVideoCards, 500);
+    // 페이지 로딩 시 자동 재생을 하지 않기 위해 아래 코드를 주석/제거합니다.
+    // setTimeout(checkVideoCards, 500);
 
     function playPreview(video, previewBadge, playBtn, thumbnail, card) {
         if (card.previewTimeout) {
