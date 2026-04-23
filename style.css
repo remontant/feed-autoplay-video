@@ -50,7 +50,7 @@ body.scrolled .feed-cards-container {
 
 /* Nate Top Section (Search & Banner) */
 .nate-top-section {
-    padding: 80px 0 150px 0; /* 상단 여백 더 넓게(80px), 하단 여백 광고와 날씨 사이 150px 벌림 */
+    padding: 80px 0 150px 0; /* 상단 여백(80px), 하단 여백(150px)으로 광고/날씨 영역까지의 간격 유지 */
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -92,6 +92,7 @@ body.scrolled .feed-cards-container {
 .nate-banner {
     display: flex;
     align-items: center;
+    justify-content: center; /* 광고 컨텐츠 중앙 정렬 */
     gap: 16px;
 }
 

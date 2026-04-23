@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hasScrolled = true; // 스크롤이 한 번이라도 발생했음을 기록
 
         // 300px 이상 스크롤 시 scrolled 클래스 추가하여 패딩 제거 및 카드 확장
-        if (window.scrollY > 300) {
+        if (window.scrollY > 180) {
             document.body.classList.add('scrolled');
         } else {
             document.body.classList.remove('scrolled');
