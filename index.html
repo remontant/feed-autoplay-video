@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Video Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>FEED VIDEO TEST</h1>
+    </header>
+    
+    <main class="feed-container">
+        <!-- Text Card -->
+        <article class="card">
+            <div class="card-image placeholder-image"></div>
+            <div class="card-content">
+                <h2>새로운 기술 트렌드 살펴보기</h2>
+                <p>2026년 웹 개발에서 주목해야 할 주요 기술들에 대해 알아봅니다.</p>
+                <div class="card-meta">1시간 전 · Tech News</div>
+            </div>
+        </article>
+
+        <!-- Video Card 1 (가로형 16:9) -->
+        <article class="card video-card">
+            <div class="video-container">
+                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=800&q=80');"></div>
+                <video 
+                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                    muted 
+                    playsinline 
+                    preload="none"
+                ></video>
+                <div class="video-overlay">
+                    <span class="preview-badge">미리보기</span>
+                    <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>아름다운 풍경 (가로형)</h2>
+                <p>기본 16:9 비율의 비디오 카드입니다.</p>
+                <div class="card-meta">3시간 전 · Nature</div>
+            </div>
+        </article>
+
+        <!-- Video Card 2 (세로형 9:16) -->
+        <article class="card video-card">
+            <!-- 세로형은 video-container에 vertical 클래스 추가 -->
+            <div class="video-container vertical">
+                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=1066&fit=crop&q=80');"></div>
+                <video 
+                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                    muted 
+                    playsinline 
+                    preload="none"
+                ></video>
+                <div class="video-overlay">
+                    <span class="preview-badge">미리보기</span>
+                    <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>아름다운 꽃 (세로형 숏폼)</h2>
+                <p>9:16 비율로 꽉 차게 보여지는 세로형 비디오 카드입니다.</p>
+                <div class="card-meta">어제 · Shorts</div>
+            </div>
+        </article>
+
+        <!-- Text Card -->
+        <article class="card">
+            <div class="card-image placeholder-image-2"></div>
+            <div class="card-content">
+                <h2>효율적인 프론트엔드 최적화</h2>
+                <p>로딩 속도를 높이기 위한 이미지 및 영상 최적화 기법</p>
+                <div class="card-meta">5시간 전 · Development</div>
+            </div>
+        </article>
+
+        <!-- Video Card 3 (세로형 9:16) -->
+        <article class="card video-card">
+            <div class="video-container vertical">
+                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=600&h=1066&fit=crop&q=80');"></div>
+                <video 
+                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                    muted 
+                    playsinline 
+                    preload="none"
+                ></video>
+                <div class="video-overlay">
+                    <span class="preview-badge">미리보기</span>
+                    <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>자연의 소리 (세로형)</h2>
+                <p>스크롤 시 가장 Top에 가까운 영상만 3초간 재생됩니다.</p>
+                <div class="card-meta">2일 전 · Testing</div>
+            </div>
+        </article>
+
+        <!-- Grid 2 Columns (2x2 Shorts) -->
+        <div class="grid-2col">
+            <!-- Grid Video 1 -->
+            <article class="card video-card">
+                <div class="video-container vertical">
+                    <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1516245834210-c4c142787335?w=600&h=1066&fit=crop&q=80');"></div>
+                    <video 
+                        data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                        muted 
+                        playsinline 
+                        preload="none"
+                    ></video>
+                    <div class="video-overlay">
+                        <span class="preview-badge">미리보기</span>
+                        <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>그리드 1 (좌상단)</h2>
+                    <p>1번째로 재생됩니다.</p>
+                    <div class="card-meta">오늘 · Grid 1</div>
+                </div>
+            </article>
+
+            <!-- Grid Video 2 -->
+            <article class="card video-card">
+                <div class="video-container vertical">
+                    <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&h=1066&fit=crop&q=80');"></div>
+                    <video 
+                        data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                        muted 
+                        playsinline 
+                        preload="none"
+                    ></video>
+                    <div class="video-overlay">
+                        <span class="preview-badge">미리보기</span>
+                        <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>그리드 2 (우상단)</h2>
+                    <p>좌상단 영상이 끝나면 2번째로 재생됩니다.</p>
+                    <div class="card-meta">오늘 · Grid 2</div>
+                </div>
+            </article>
+
+            <!-- Grid Video 3 -->
+            <article class="card video-card">
+                <div class="video-container vertical">
+                    <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=600&h=1066&fit=crop&q=80');"></div>
+                    <video 
+                        data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                        muted 
+                        playsinline 
+                        preload="none"
+                    ></video>
+                    <div class="video-overlay">
+                        <span class="preview-badge">미리보기</span>
+                        <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>그리드 3 (좌하단)</h2>
+                    <p>우상단 영상이 끝나면 3번째로 재생됩니다.</p>
+                    <div class="card-meta">오늘 · Grid 3</div>
+                </div>
+            </article>
+
+            <!-- Grid Video 4 -->
+            <article class="card video-card">
+                <div class="video-container vertical">
+                    <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1444464666168-49b626d49c92?w=600&h=1066&fit=crop&q=80');"></div>
+                    <video 
+                        data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                        muted 
+                        playsinline 
+                        preload="none"
+                    ></video>
+                    <div class="video-overlay">
+                        <span class="preview-badge">미리보기</span>
+                        <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>그리드 4 (우하단)</h2>
+                    <p>마지막 4번째로 재생됩니다.</p>
+                    <div class="card-meta">오늘 · Grid 4</div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Video Card 4 (가로형 16:9) -->
+        <article class="card video-card">
+            <div class="video-container">
+                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80');"></div>
+                <video 
+                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                    muted 
+                    playsinline 
+                    preload="none"
+                ></video>
+                <div class="video-overlay">
+                    <span class="preview-badge">미리보기</span>
+                    <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>꽃이 피는 과정 (가로형)</h2>
+                <p>가로 비율 영상이 다시 나타납니다. 부드러운 전환을 테스트하세요.</p>
+                <div class="card-meta">3일 전 · Nature</div>
+            </div>
+        </article>
+        
+        <!-- Text Card -->
+        <article class="card">
+            <div class="card-image placeholder-image"></div>
+            <div class="card-content">
+                <h2>디스커버리 피드 UI 디자인</h2>
+                <p>사용자 경험을 향상시키는 모바일 피드 설계 가이드</p>
+                <div class="card-meta">4일 전 · Design</div>
+            </div>
+        </article>
+
+        <!-- Video Card 5 (세로형 9:16) -->
+        <article class="card video-card">
+            <div class="video-container vertical">
+                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=1066&fit=crop&q=80');"></div>
+                <video 
+                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" 
+                    muted 
+                    playsinline 
+                    preload="none"
+                ></video>
+                <div class="video-overlay">
+                    <span class="preview-badge">미리보기</span>
+                    <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>풍경 숏폼 테스트</h2>
+                <p>세로가 긴 형태의 피드에서도 안정적으로 Top 요소를 찾을 수 있습니다.</p>
+                <div class="card-meta">5일 전 · Shorts</div>
+            </div>
+        </article>
+
+        <!-- Grid 2 Columns (Mixed) -->
+        <div class="grid-2col">
+            <!-- Grid Text Card -->
+            <article class="card">
+                <div class="card-image placeholder-image-2"></div>
+                <div class="card-content">
+                    <h2>미니 텍스트 카드</h2>
+                    <p>그리드 안에 배치된 텍스트 카드입니다.</p>
+                    <div class="card-meta">6일 전 · Text</div>
+                </div>
+            </article>
+
+            <!-- Grid Video 3 -->
+            <article class="card video-card">
+                <div class="video-container vertical">
+                    <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=1066&fit=crop&q=80');"></div>
+                    <video 
+                        data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                        muted 
+                        playsinline 
+                        preload="none"
+                    ></video>
+                    <div class="video-overlay">
+                        <span class="preview-badge">미리보기</span>
+                        <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>그리드 숏폼 3</h2>
+                    <p>텍스트 카드와 나란히 배치되었습니다.</p>
+                    <div class="card-meta">6일 전 · Grid</div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Video Card 6 (가로형 16:9) -->
+        <article class="card video-card">
+            <div class="video-container">
+                <div class="thumbnail" style="background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80');"></div>
+                <video 
+                    data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" 
+                    muted 
+                    playsinline 
+                    preload="none"
+                ></video>
+                <div class="video-overlay">
+                    <span class="preview-badge">미리보기</span>
+                    <button class="play-btn" style="display: none;">▶ 전체 보기</button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>마지막 영상</h2>
+                <p>끝까지 스크롤한 후 다시 위로 올려도 정상적으로 미리보기가 동작합니다.</p>
+                <div class="card-meta">1주일 전 · End of Feed</div>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

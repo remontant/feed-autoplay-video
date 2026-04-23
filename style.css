@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.header {
+    background-color: #fff;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #202124;
+}
+
+.feed-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: box-shadow 0.3s;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.placeholder-image {
+    background-color: #e8eaed;
+    background-image: linear-gradient(45deg, #e8eaed 25%, #f8f9fa 25%, #f8f9fa 50%, #e8eaed 50%, #e8eaed 75%, #f8f9fa 75%, #f8f9fa 100%);
+    background-size: 20px 20px;
+}
+
+.placeholder-image-2 {
+    background-color: #ceead6;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+.video-container.vertical {
+    aspect-ratio: 1 / 1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+    transition: opacity 0.3s;
+}
+
+.thumbnail.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.preview-badge {
+    align-self: flex-start;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.play-btn {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+}
+
+.play-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.card-meta {
+    font-size: 12px;
+    color: #80868b;
+}
